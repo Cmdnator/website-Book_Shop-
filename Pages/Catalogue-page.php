@@ -94,7 +94,7 @@ $result = mysqli_query($db_conn, $query);
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
 
                 <div class="book-card">
-                    <img src="<?php print $row['image_path']; ?>">
+                    <img src="../<?php print $row['image_path']; ?>">
 
                     <h3><?php print $row['title']; ?></h3>
                     <p class="author">by <?php print $row['author']; ?></p>

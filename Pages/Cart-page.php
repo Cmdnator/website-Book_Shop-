@@ -69,7 +69,7 @@ foreach ($cart as $item) {
         <?php 
         foreach ($cart as $index => $item) : ?>
             <tr>
-                <td><img src="<?php print htmlspecialchars($item['image'], ENT_QUOTES) ?>" width="120"></td>
+                <td><img src="../<?php print htmlspecialchars($item['image'], ENT_QUOTES) ?>" width="120"></td>
                 <td>
                 <?php print $item['title']; ?>
                     <br>
@@ -98,8 +98,8 @@ foreach ($cart as $item) {
         <?php endforeach;?>
     </table>
     <div class="cart-buttons">
-    <a href="../Catalogue-page.php" class="cart-btn back">⬅ Back to Shopping</a>
-    <a href="../BillingInfo-page.php" class="cart-btn checkout">Proceed to Checkout →</a>
+    <a href="Catalogue-page.php" class="cart-btn back">⬅ Back to Shopping</a>
+    <a href="BillingInfo-page.php" class="cart-btn checkout">Proceed to Checkout →</a>
 </div>
 <?php endif; ?>
 </main>
