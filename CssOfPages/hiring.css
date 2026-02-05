@@ -1,0 +1,155 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    line-height: 1.5; 
+}
+
+main {
+    flex: 1; 
+    padding: 40px 30px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* GENERAL PAGE STYLING */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    background-color: #f4f0ff;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #4a3b8a;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* WHY WORK WITH US - MODERN CARD STYLE */
+.why-work-with-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* CSS for h2 in Why Work With Us */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #4a3b8a;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+
+.why-card {
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 25px 20px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.why-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #4a3b8a;
+}
+
+.why-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 22px;
+}
+
+/* JOB APPLICATION FORM */
+.job-listing-form {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.job-listing-form h3 {
+    text-align: center;
+    color: #4a3b8a;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.job-listing-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #333;
+}
+
+.job-listing-form input,
+.job-listing-form textarea,
+.job-listing-form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-listing-form input:focus,
+.job-listing-form textarea:focus,
+.job-listing-form select:focus {
+    border-color: #6c4bd0;
+    box-shadow: 0 0 6px rgba(108, 75, 208, 0.3);
+}
+
+.job-listing-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.job-listing-form button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #6c4bd0;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.job-listing-form button:hover {
+    background-color: #593abd;
+}
+

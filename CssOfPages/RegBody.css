@@ -1,0 +1,86 @@
+/* Style for reg  form */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+
+#Reg-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center; 
+    width: auto; 
+    margin-top: 30px; 
+}
+
+/* Everything above input */
+#aboveform{
+    display: flex;
+    justify-content: center;   
+    align-items: center; 
+    gap: 7px;
+}
+/* Form */
+#form {
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; 
+}
+
+label {
+    margin-bottom: 5px; 
+    font-weight: bold;
+}
+
+/* Style for input*/
+.form-group input {
+    padding: 12px 14px;
+    width: 250px;
+    border-radius: 6px;
+    background: #484896;
+    border: 1px solid #3b3b55;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 6px rgba(99, 102, 241, 0.5);
+    outline: none;
+}
+
+/* Style for reg button */
+input[type="submit"] {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    transition: 0.2s;
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4);
+}

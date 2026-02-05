@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.billing-card {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.billing-card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* TWO-COLUMN LAYOUT */
+.billing-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.billing-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;   /* space between label + input */
+}
+
+.billing-form {
+    gap: 25px 30px;  /* increase row + column spacing */
+}
+
+/* Full-width fields */
+.full {
+    grid-column: span 2;
+}
+
+.billing-form label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.billing-form input {
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    font-size: 16px;
+    transition: border 0.2s ease, background 0.2s ease;
+}
+
+.billing-form input:focus {
+    outline: none;
+    border-color: #4a3cff;
+    background: #fff;
+}
+
+/* Submit button spans 2 columns */
+.billing-submit {
+    grid-column: span 2;
+    background: #4a3cff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.25s ease;
+}
+
+.billing-submit:hover {
+    background: #372ecc;
+}
+
+.billing-back {
+    display: block;
+    margin-top: 22px;
+    text-align: center;
+    color: #444;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.billing-back:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE — stack columns into one */
+@media (max-width: 700px) {
+    .billing-form {
+        grid-template-columns: 1fr;
+    }
+
+    .billing-submit {
+        grid-column: span 1;
+    }
+
+    .full {
+        grid-column: span 1;
+    }
+}

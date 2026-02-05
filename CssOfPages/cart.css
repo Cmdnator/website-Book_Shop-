@@ -1,0 +1,178 @@
+/* Style for reg  form */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    line-height: 1.5; 
+}
+
+main {
+    flex: 1; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* Total amount heading */
+.cart-total {
+    text-align: center;     
+    margin-top: 20px;          
+    font-size: 2rem;          
+    font-weight: bold;         
+    color: #197c42;             
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* PAGE TITLE*/
+.hero {
+    text-align: center;         
+    color: #333;                 
+    font-family: 'Arial', sans-serif; 
+    margin: 30px 0;              
+}
+
+
+h1.hero {
+    font-size: 3rem;           
+    font-weight: bold;
+    letter-spacing: 1px;         
+    color: #2c3e50;            
+}
+
+
+p.hero {
+    font-size: 1.5rem;       
+    font-style: italic;           
+    color: #e74c3c;             
+}
+
+/* CART TABLE STYLE*/
+
+table {
+    width: 80%; /* Make table take full width */
+    table-layout: fixed; /* Force columns to distribute evenly */
+    font-size: 1.5rem;
+    margin: 30px auto;
+    border-collapse: collapse; /* Merge borders nicely */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    border: 1px solid #ddd; /* Add a light border for the table */
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 0px solid #e5e7eb; /* Line between rows */
+}
+
+table th {
+    background: #1a1a2e;
+    color: #4f46e5;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Author style */
+.author-text {
+    font-size: 0.85em ;
+    color: #666 ;
+    font-style: italic ;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Last row - remove bottom border for neat look */
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Row hover */
+table tr:hover {
+    background: #f3f4f6;
+}
+
+/* Book thumbnail */
+table img {
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* REMOVE BUTTON */
+a.remove-btn,
+table a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+a.remove-btn:hover,
+table a:hover {
+    background: #4338ca;
+}
+
+/* Quantity input styling */
+.qty-input {
+    width: 60px;
+    padding: 6px;
+    font-size: 1.1rem;
+    text-align: center;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.qty-input:focus {
+    border-color: #4f46e5;
+}
+
+/* Cart buttons container */
+.cart-buttons {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Buttons */
+.cart-btn {
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+.cart-btn.back {
+    background: #e5e7eb;
+    color: #1f2937;
+}
+
+.cart-btn.back:hover {
+    background: #d1d5db;
+}
+
+.cart-btn.checkout {
+    background: #4f46e5;
+    color: white;
+}
+
+.cart-btn.checkout:hover {
+    background: #4338ca;
+}
+
+
+
+
