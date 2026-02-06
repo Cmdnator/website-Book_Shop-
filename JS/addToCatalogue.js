@@ -1,4 +1,4 @@
-const ApiKey = "AIzaSyAg29wQapcmE8Oti8Fe6Qqg3fPSXuC3YJo";
+const ApiKey = 
 const isbnForm = document.querySelector(".submitISBN");
 
 
