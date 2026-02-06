@@ -30,7 +30,7 @@ $result = mysqli_query($db_conn, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="../PartsOfPage/PartsOfPage.css" rel="stylesheet">
     <link href="../CssOfPages/admin_dashboard.css" rel="stylesheet">
-    <title>Orders</title>
+    <title>Admin Panel</title>
 </head>
 <body>
 
@@ -41,7 +41,7 @@ $result = mysqli_query($db_conn, $sql);
 
 <main>
 
-<h1 class="title">Orders</h1>
+<h1 class="title">Admin Dashboard</h1>
 <div class="dashboard-grid">
 
     <div class="dashboard-card create-order-card">

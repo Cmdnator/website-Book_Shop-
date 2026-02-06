@@ -1,0 +1,120 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f7f9; /* Light gray background for contrast */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+main {
+    flex: 1;
+    max-width: 900px; /* Slightly narrower for focus */
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* CARDS */
+.dashboard-card, .bookCover {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 30px 40px;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* BUTTONS */
+.dashboard-card button {
+    width: 100%; 
+    margin-top: 15px;
+    padding: 14px;
+    border: none;
+    background: linear-gradient(135deg, #4a90e2, #357abd); 
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+    transition: all 0.3s ease;
+}
+
+.dashboard-card button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #357abd, #2a6198);
+    box-shadow: 0 6px 15px rgba(74, 144, 226, 0.4);
+}
+
+/* INPUTS */
+input, input[type="number"] {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1.5px solid #e0e6ed;
+    background-color: #fcfcfc;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+}
+
+/* BOOK INFO AREA */
+.bookCover {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.bookCover .book-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bookCover .book-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.bookCover .book-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Label Styling */
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: -5px;
+    margin-left: 5px;
+}
