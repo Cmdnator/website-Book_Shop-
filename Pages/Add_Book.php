@@ -49,13 +49,14 @@ if (!isset($_SESSION['user_id'])) {
 
 <div class="bookCover">
     <div class="book-image">
-        <img src="" id="coverImg" alt="Book Cover" />
+        <img src="" id="coverImg"/>
     </div>
     <div class="book-info">
-        <input type="text" id="title" name="title" placeholder="Book Title">
-        <input type="text" id="author" name="author" placeholder="Author Name">
-        <input type="number" id="price" name="price" placeholder="Price">
+        <p><strong>Title:</strong> <span id="title"></span></p>
+        <p><strong>Author:</strong> <span id="author"></span></p>
+        <p><strong>Price:</strong> <span id="price"></span></p>
     </div>
+
 </div>
 
 	</main>

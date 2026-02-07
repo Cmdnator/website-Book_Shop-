@@ -83,7 +83,7 @@ input:focus {
 
 /* BOOK INFO AREA */
 .bookCover {
-    display: grid;
+    display: none;
     grid-template-columns: 200px 1fr;
     gap: 30px;
     align-items: center;
