@@ -10,12 +10,16 @@
                 Catalogue
             </a>
         </li>
-            <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1): ?>
+           <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1): ?>
                 <li>
-                    <div class="menue">
-                        <a href="admin_dashboard.php">Admin Panel</a>
-                            <div class="dropdown-menue">
-                                <a class="menuelink" href="Add_Book.php">Add Book</a>
+                    <div id="menue">
+                        <a href="admin_dashboard.php">
+                            Admin Panel
+                        </a>
+                        <div id="dropdown-menue">
+                            <a class="menuelink" href="Add_Book.php">
+                                Add Book
+                            </a>
                             </div>
                     </div>
                 </li>
