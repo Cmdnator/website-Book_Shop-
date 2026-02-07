@@ -69,5 +69,5 @@ function displayInfo(data){
     const price = document.getElementById("price");
     let Rprice  =  ((Math.random() * 51) + 10);
     Rprice = +Rprice.toFixed(2);
-    price.textContent  = Rprice || "";
+    price.textContent  = ("$" + Rprice) || "";
 }
