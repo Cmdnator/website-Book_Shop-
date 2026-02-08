@@ -30,7 +30,11 @@ async function getData(isbn){
         return null;
     }
 
-        return bookData.items[0];
+       const matchedBook = bookData.items.find(item => 
+            item.volumeInfo.industryIdentifiers?.some(id => id.identifier === isbn)
+        );
+
+        return matchedBook || bookData.items[0]; // fallback if exact match not found
     } 
     catch(err){
         alert("Failed to fetch book info");
@@ -65,9 +69,45 @@ function displayInfo(data){
         authorInput.textContent  = "";
     }
 
+    //Category
+    const category = document.getElementById("category");
+
+    if (volumeInfo.categories) {
+        category.textContent = volumeInfo.categories.join(", ");
+    } else {
+        category.textContent = "";
+    }
+
     //Book price(random because Google API doesnt contain info about book`s price)
     const price = document.getElementById("price");
-    let Rprice  =  ((Math.random() * 51) + 10);
+    let Rprice  =  ((Math.random() * 41) + 10);
     Rprice = +Rprice.toFixed(2);
     price.textContent  = ("$" + Rprice) || "";
 }
+
+document.getElementById("saveBook").addEventListener("click", async () => {
+
+    const title = document.getElementById("title").textContent;
+    const author = document.getElementById("author").textContent;
+    const price = document.getElementById("price").textContent.replace("$", "");
+    const category = document.getElementById("category").textContent;
+    const cover = document.getElementById("coverImg").src;
+
+    const response = await fetch("../phpFunctions/add_Book.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            title,
+            author,
+            price,
+            category,
+            cover
+        })
+    });
+
+    const result = await response.text();
+    alert(result);
+    location.reload();
+});

@@ -110,7 +110,7 @@ input:focus {
     gap: 10px;
 }
 
-/* Label Styling */
+
 label {
     font-size: 14px;
     font-weight: 600;
@@ -118,3 +118,31 @@ label {
     margin-bottom: -5px;
     margin-left: 5px;
 }
+
+#saveBook {
+    grid-column: 1 / -1; 
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+    transition: all 0.3s ease;
+}
+
+#saveBook:hover {
+    background: linear-gradient(135deg, #219150, #27ae60);
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+}
+

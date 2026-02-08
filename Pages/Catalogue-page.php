@@ -94,7 +94,14 @@ $result = mysqli_query($db_conn, $query);
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
 
                 <div class="book-card">
-                    <img src="../<?php print $row['image_path']; ?>">
+                    <?php
+                        $imgSrc = $row['image_path'];
+                        if (!preg_match('/^https?:\/\//', $imgSrc)) {
+                            // If the path does not start with http, treat as local file
+                            $imgSrc = '../books_images/' . basename($imgSrc);
+                        }
+                        ?>
+                    <img src="<?= htmlspecialchars($imgSrc) ?>"?>
 
                     <h3><?php print $row['title']; ?></h3>
                     <p class="author">by <?php print $row['author']; ?></p>

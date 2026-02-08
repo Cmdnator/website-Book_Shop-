@@ -54,9 +54,10 @@ if (!isset($_SESSION['user_id'])) {
     <div class="book-info">
         <p><strong>Title:</strong> <span id="title"></span></p>
         <p><strong>Author:</strong> <span id="author"></span></p>
+        <p><strong>Category:</strong> <span id="category"></span></p>
         <p><strong>Price:</strong> <span id="price"></span></p>
     </div>
-
+    <button id="saveBook">Save Book</button>
 </div>
 
 	</main>
