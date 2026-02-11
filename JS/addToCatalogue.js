@@ -1,4 +1,3 @@
-const ApiKey = "AIzaSyCnvcGOjW1XoXrKOAvv-tIt5OyIw8xoTZ0";
 const isbnForm = document.querySelector(".submitISBN");
 
 isbnForm.addEventListener("submit", async event => {
@@ -19,25 +18,33 @@ isbnForm.addEventListener("submit", async event => {
     }
 });
 
-async function getData(isbn){
-    try{
-        const Data = await fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}&key=${ApiKey}`);
+async function getData(isbn) {
+    try {
+        const response = await fetch(`http://localhost:3000/api/data?isbn=${isbn}`);
+        
+        // If the server sent "ISBN is required" (400) or "Google rejected" (403/500)
+        if (!response.ok) {
+            const errorData = await response.json();
+            alert(`Server Error: ${errorData.error}`);
+            return null;
+        }
 
-        const bookData = await Data.json();
+        const bookData = await response.json();
     
         if (!bookData.items || bookData.items.length === 0) {
             alert("Book not found");
-        return null;
-    }
+            return null;
+        }
 
-       const matchedBook = bookData.items.find(item => 
+        const matchedBook = bookData.items.find(item => 
             item.volumeInfo.industryIdentifiers?.some(id => id.identifier === isbn)
         );
 
-        return matchedBook || bookData.items[0]; // fallback if exact match not found
+        return matchedBook || bookData.items[0]; 
     } 
-    catch(err){
-        alert("Failed to fetch book info");
+    catch(err) {
+        console.error("Connection Error:", err);
+        alert("Check if your Node server is running on port 3000");
     }
 }
 
