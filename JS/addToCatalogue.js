@@ -73,7 +73,7 @@ function displayInfo(data){
     if (volumeInfo.authors) {
         authorInput.textContent  = volumeInfo.authors.join(", ");
     } else {
-        authorInput.textContent  = "";
+        authorInput.textContent  = "Unknown Author";
     }
 
     //Category
