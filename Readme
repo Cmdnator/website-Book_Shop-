@@ -1,0 +1,110 @@
+# 📚 Online Bookstore – Full-Stack Web Application
+
+A full-stack bookstore management system built with PHP, MySQL, and modern JavaScript (ES6+).
+The application demonstrates authentication, session handling, REST API integration, and structured server-side architecture.
+
+---
+
+# 🏗 Architecture Overview
+
+The project follows a classic client–server architecture:
+
+* **Client Layer:** HTML, CSS, JavaScript (ES6+)
+* **Server Layer:** PHP (session handling, routing logic, DB interaction)
+* **Database Layer:** MySQL (relational schema)
+* **External Service:** Google Books REST API
+
+```
+Client (Browser)
+        ↓
+PHP Server (Authentication, Business Logic)
+        ↓
+MySQL Database
+        ↓
+External API (Google Books)
+```
+
+---
+
+# 🔐 Authentication & Session Management
+
+* Session-based authentication using `$_SESSION`
+* Configurable session lifetime
+* Access control for protected routes (admin pages)
+* Redirect logic for unauthorized access
+* HttpOnly cookies enabled
+
+Example:
+
+```php
+session_set_cookie_params([
+    'lifetime' => 8 * 60 * 60,
+    'path' => '/',
+    'httponly' => true,
+    'samesite' => 'Lax'
+]);
+session_start();
+```
+
+---
+
+
+# 🌐 External API Integration
+
+Integrated Google Books API for ISBN-based metadata enrichment.
+
+### Request Example
+
+```
+https://www.googleapis.com/books/v1/volumes?q=isbn:{ISBN}
+```
+
+### JavaScript Implementation
+
+* Fetch API
+* async/await
+* JSON parsing
+* Object destructuring
+* Optional chaining
+* DOM manipulation
+
+Example:
+
+```javascript
+async function getData(isbn) {
+    const response = await fetch(
+        `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`
+    );
+
+    const data = await response.json();
+
+    if (!data.items) {
+        throw new Error("Book not found");
+    }
+
+    return data.items[0].volumeInfo;
+}
+```
+
+---
+
+# 🧠 JavaScript Concepts Used
+
+* ES6 syntax
+* Arrow functions
+* Async/Await
+* Error handling (try/catch)
+* Object destructuring
+* Optional chaining
+* Event handling
+* Form validation
+* Dynamic DOM updates
+
+---
+
+
+# 📈 Future Improvements
+
+* Implement shopping cart functionality
+* Deploy to cloud environment
+
