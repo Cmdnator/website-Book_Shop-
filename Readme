@@ -102,18 +102,17 @@ async function getData(isbn) {
 
 ---
 
+### Log In Page
+![Log In Page](images/login.png)
 
-Log In Page
-<img width="1917" height="1025" alt="Знімок екрана 2026-09-10 160247" src="https://github.com/user-attachments/assets/3205c7bd-6b02-4084-80e9-b8d69435a928" />
+### Catalogue
+![Catalogue](images/catalogue.png)
 
-Catalogue
-<img width="1917" height="1017" alt="Знімок екрана 2026-09-10 160343" src="https://github.com/user-attachments/assets/c5e5af2f-d1c4-4455-b798-dad0333d564d" />
+### Cart
+![Cart](images/cart.png)
 
-Cart
-<img width="1917" height="1017" alt="Знімок екрана 2026-09-10 160435" src="https://github.com/user-attachments/assets/7b73c7b4-dc77-4328-968e-0ef536a23361" />
-
-Admin Panel
-<img width="1917" height="1017" alt="Знімок екрана 2026-09-10 160343" src="https://github.com/user-attachments/assets/f4a2d35a-16d9-4ab9-8887-4ecec56756c3" />
+### Admin Panel
+![Admin Panel](images/admin.png)
 
 
 
