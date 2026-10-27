@@ -103,16 +103,14 @@ async function getData(isbn) {
 ---
 
 ### Log In Page
-![Log In Page](images/login.png)
+![Log In Page](images1/login.png)
 
 ### Catalogue
-![Catalogue](images/catalogue.png)
+![Catalogue](images1/catalogue.png)
 
 ### Cart
-![Cart](images/cart.png)
+![Cart](images1/cart.png)
 
-### Admin Panel
-![Admin Panel](images/admin.png)
 
 
 
